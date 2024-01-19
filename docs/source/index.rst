@@ -2,6 +2,7 @@ Develop Notes
 =================
 
 .. toctree::
+   :numbered:
    :maxdepth: 2
    :caption: Contents:
 
