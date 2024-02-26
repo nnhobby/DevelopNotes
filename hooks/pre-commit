@@ -1,0 +1,16 @@
+#!/bin/sh
+
+CURRENT_USER=$(git config --local user.name)
+CURRENT_EMAIL=$(git config --local user.email)
+
+EXPECTED_USER="hobby"
+EXPECTED_EMAIL="nnhobby@users.noreply.github.com"
+
+if [[ "${CURRENT_EMAIL}" != "${EXPECTED_EMAIL}" ]] || [[ "${CURRENT_USER}" != "${EXPECTED_USER}" ]]; then
+    echo "Wrong git user name or email!"
+    git config --local user.name "${EXPECTED_USER}"
+    git config --local user.email "${EXPECTED_EMAIL}"
+    exit 1
+fi
+
+exit 0

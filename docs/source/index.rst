@@ -7,6 +7,7 @@ Develop Notes
    :caption: Contents:
 
    reStructuredText
+   cuda/index
    deeplearning/index
    nlp
    conv_arithmetic
